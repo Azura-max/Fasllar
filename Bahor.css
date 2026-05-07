@@ -1,0 +1,233 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* BODY */
+body {
+    overflow-x: hidden;
+}
+
+/* NAVBAR */
+nav {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background: rgba(0,0,0,0.4);
+    backdrop-filter: blur(10px);
+    color: white;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 25px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: 0.3s;
+    position: relative;
+}
+
+/* underline animation */
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    left: 0;
+    bottom: -5px;
+    background: #00c3ff;
+    transition: 0.3s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+nav ul li a:hover {
+    color: #00c3ff;
+}
+
+/* HERO */
+.hero {
+    height: 100vh;
+    position: relative;
+}
+
+/* VIDEO */
+.bg-video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* OVERLAY GENERAL */
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+/* FASL RANGLARI */
+.winter-overlay {
+    background: rgba(0, 100, 200, 0.4);
+}
+
+.spring-overlay {
+    background: rgba(0, 150, 80, 0.4);
+}
+
+.summer-overlay {
+    background: rgba(255, 150, 0, 0.4);
+}
+
+.autumn-overlay {
+    background: rgba(200, 100, 0, 0.4);
+}
+
+/* CONTENT */
+.content {
+    position: relative;
+    color: white;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    animation: fadeIn 2s ease;
+}
+
+.content h1 {
+    font-size: 60px;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+.content p {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+/* BUTTON */
+.btn {
+    padding: 12px 30px;
+    background: #00c3ff;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #0099cc;
+    transform: scale(1.1);
+}
+
+/* SECTION */
+.info {
+    padding: 100px 50px;
+    text-align: center;
+    background: #f5f5f5;
+}
+
+.info h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.info p {
+    font-size: 18px;
+    max-width: 700px;
+    margin: auto;
+}
+
+/* FOOTER */
+footer {
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-40%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(-50%);
+    }
+}
+
+/* 🌸 GULLAR (BAHOR) */
+.flower {
+    position: absolute;
+    top: -50px;
+    font-size: 20px;
+    animation: fall 10s linear infinite;
+}
+
+/* ❄️ QOR (QISH) */
+.snow {
+    position: absolute;
+    top: -50px;
+    color: white;
+    font-size: 14px;
+    animation: fall 12s linear infinite;
+}
+
+/* 🍂 BARG (KUZ) */
+.leaf {
+    position: absolute;
+    top: -50px;
+    font-size: 18px;
+    animation: fall 8s linear infinite;
+}
+
+/* UNIVERSAL FALL */
+@keyframes fall {
+    to {
+        transform: translateY(110vh);
+    }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+
+    nav {
+        padding: 10px 20px;
+    }
+
+    .content h1 {
+        font-size: 35px;
+    }
+
+    .content p {
+        font-size: 16px;
+    }
+
+    nav ul li {
+        margin-left: 15px;
+    }
+
+}

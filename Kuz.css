@@ -1,0 +1,250 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* BODY */
+body {
+    overflow-x: hidden;
+}
+
+/* NAVBAR */
+nav {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background: rgba(0,0,0,0.4);
+    backdrop-filter: blur(10px);
+    color: white;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* NAV LINKS */
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 25px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    position: relative;
+    transition: 0.3s;
+}
+
+/* underline animation */
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    left: 0;
+    bottom: -5px;
+    background: #00c3ff;
+    transition: 0.3s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+nav ul li a:hover {
+    color: #00c3ff;
+}
+
+/* HERO */
+.hero {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+/* VIDEO */
+.bg-video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* OVERLAY */
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+/* FASLLAR RANGLARI */
+.winter-overlay {
+    background: rgba(0, 100, 200, 0.4);
+}
+
+.spring-overlay {
+    background: rgba(0, 150, 80, 0.4);
+}
+
+.summer-overlay {
+    background: rgba(255, 150, 0, 0.4);
+}
+
+.autumn-overlay {
+    background: rgba(200, 100, 0, 0.4);
+}
+
+/* CONTENT */
+.content {
+    position: relative;
+    color: white;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    animation: fadeIn 2s ease;
+}
+
+.content h1 {
+    font-size: 60px;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+.content p {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+/* BUTTON */
+.btn {
+    padding: 12px 30px;
+    background: #00c3ff;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #0099cc;
+    transform: scale(1.1);
+}
+
+/* SECTION */
+.info {
+    padding: 100px 50px;
+    text-align: center;
+    background: #f5f5f5;
+}
+
+.info h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.info p {
+    font-size: 18px;
+    max-width: 700px;
+    margin: auto;
+}
+
+/* FOOTER */
+footer {
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* FADE ANIMATION */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-40%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(-50%);
+    }
+}
+
+/* ❄️ QOR (QISH) */
+.snow {
+    position: absolute;
+    top: -50px;
+    color: white;
+    font-size: 14px;
+    animation: snowFall 12s linear infinite;
+}
+
+@keyframes snowFall {
+    to {
+        transform: translateY(110vh);
+    }
+}
+
+/* 🌸 GULLAR (BAHOR) */
+.flower {
+    position: absolute;
+    top: -50px;
+    font-size: 20px;
+    animation: flowerFall 10s linear infinite;
+}
+
+@keyframes flowerFall {
+    to {
+        transform: translateY(110vh);
+    }
+}
+
+/* 🍂 BARG (KUZ — REALISTIC) */
+.leaf {
+    position: absolute;
+    top: -50px;
+    font-size: 18px;
+    animation: leafFall 8s linear infinite;
+}
+
+@keyframes leafFall {
+    0% {
+        transform: translateY(0) translateX(0) rotate(0deg);
+    }
+    25% {
+        transform: translateY(25vh) translateX(20px) rotate(90deg);
+    }
+    50% {
+        transform: translateY(50vh) translateX(-20px) rotate(180deg);
+    }
+    75% {
+        transform: translateY(75vh) translateX(20px) rotate(270deg);
+    }
+    100% {
+        transform: translateY(110vh) translateX(-30px) rotate(360deg);
+    }
+}
+
+/* ☀️ SUN (YOZ) */
+.sun {
+    position: absolute;
+    top: 80px;
+    right: 100px;
+    width: 120px;
+    height: 120px;
+    background: radial-gradient(circle, #ffd700, #ff8c00);
+    border-radius: 50%;
+    box-shadow: 0 0 50px #ffd700;
+    animation: pulse 3s infinite;
+}
